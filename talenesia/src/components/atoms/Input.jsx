@@ -20,14 +20,14 @@
 // );
 import PropTypes from 'prop-types';
 
-function Input({ type, placeholder, value, onChange }) {
+function Input({ type, placeholder, value, onChange, className }) {
   return (
     <input
       type={type}
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className="border rounded px-2 py-1"
+      className={className}
     />
   );
 }
@@ -37,6 +37,7 @@ Input.propTypes = {
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 

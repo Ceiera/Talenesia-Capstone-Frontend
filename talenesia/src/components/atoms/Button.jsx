@@ -16,9 +16,9 @@
 // export default Button;
 import PropTypes from 'prop-types';
 
-function Button({ label, onClick }) {
+function Button({ label, type, className }) {
   return (
-    <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={onClick}>
+    <button className={className} type={type}>
       {label}
     </button>
   );
@@ -26,7 +26,8 @@ function Button({ label, onClick }) {
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default Button;
