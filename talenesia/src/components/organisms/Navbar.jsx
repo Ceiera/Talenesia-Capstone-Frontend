@@ -43,7 +43,7 @@
 // }
 
 // export default Navbar;
-import Button from '../../components/atoms/Button';
+// import Button from '../../components/atoms/Button';
 
 // function Navbar() {
 //   return (
@@ -92,9 +92,9 @@ import Button from '../../components/atoms/Button';
 
 // export default Navbar;
 
-function Navbar() {
+function Navbar () {
   return (
-    <header className="py-10">
+    <header className="py-5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex justify-between">
           <div className="flex items-center md:space-x-12">
@@ -105,25 +105,26 @@ function Navbar() {
                 className="h-10 w-auto"
               />
             </a>
-            <a className="text-slate-700 hover:text-blue-200" href="#features">
-              Features
-            </a>
-            <a className="text-slate-700 hover:text-blue-200" href="#testimonials">
-              Testimonials
-            </a>
-            <a className="text-slate-700 hover:text-blue-200" href="#pricing">
-              Pricing
-            </a>
+
           </div>
           <div className="flex items-center space-x-8 md:space-x-8">
-            <a className="text-slate-700 hover:text-blue-200" href="/login">
-              Sign in
+            <a className=" text-slate-700 hover:text-blue-200 font-semibold" href="#home">
+              Home
+            </a>
+            <a
+              className="text-slate-700 hover:text-blue-200 font-semibold"
+              href="#course"
+            >
+              Course
+            </a>
+            <a className="text-slate-700 hover:text-blue-200 font-semibold" href="#ourteacher">
+              Our Teacher
             </a>
             <a
               className="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600"
               href="/register"
             >
-              <span>Get started today</span>
+              <span>Login</span>
             </a>
           </div>
         </nav>
