@@ -17,7 +17,7 @@ function FormLogin() {
                     </div>
                     <button type="submit" className="w-full rounded-full border border-transparent mt-3 py-2 px-5 bg-teal-600 text-white hover:text-teal-600 hover:bg-white hover:border-teal-600 active:bg-teal-800 active:text-blue-100">Masuk</button>
                 </form>
-                <p className="text-sm text-[#143B75] mt-3">Belum Memiliki Akun? <span><a href="/register" className="text-[#22897D]">Daftar</a></span></p>
+                <p className="text-sm text-[#143B75] mt-3">Belum Memiliki Akun? <span><a href="/register" className="text-[#22897D] hover:text-blue-300">Daftar</a></span></p>
             </div>
         </div>
     )

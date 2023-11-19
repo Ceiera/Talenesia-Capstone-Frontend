@@ -92,7 +92,7 @@
 
 // export default Navbar;
 
-function Navbar() {
+function Navbar({index}) {
   return(
     <header className="flex justify-center py-3.5">
       <div className="w-[90%] flex justify-between items-center">
@@ -103,15 +103,24 @@ function Navbar() {
             </a>
           </div>
         </div>
-        <div className="navbar flex gap-8 items-center text-sm pl-5">
+        <div className="navbar flex gap-6 items-center text-sm pl-5">
           <div>
-            <a href="" className="hover:text-blue-300">Home</a>
+          {index === 0
+              ? <p className="text-white rounded-full bg-[#143B75] py-1 px-3">Home</p>
+              : <a href="/" className="hover:text-blue-300 rounded-full bg-transparent py-1 px-3">Home</a>
+            }
           </div>
           <div>
-            <a href="" className="hover:text-blue-300">Kursus</a>
+            {index === 1
+              ? <p className="text-white rounded-full bg-[#143B75] py-1 px-3">Kursus</p>
+              : <a href="/course" className="hover:text-blue-300 rounded-full bg-transparent py-1 px-3">Kursus</a>
+            }
           </div>
           <div>
-            <a href="" className="hover:text-blue-300">Pengajar</a>
+          {index === 2
+              ? <p className="text-white rounded-full bg-[#143B75] py-1 px-3">Pengajar</p>
+              : <a href="/teacher" className="hover:text-blue-300 rounded-full bg-transparent py-1 px-3">Pengajar</a>
+            }
           </div>
           <div>
             <a href="/login" className="rounded-full border border-transparent py-1.5 px-5 bg-teal-600 text-white hover:text-teal-600 hover:bg-white hover:border-teal-600 active:bg-teal-800 active:text-blue-100">Login</a>

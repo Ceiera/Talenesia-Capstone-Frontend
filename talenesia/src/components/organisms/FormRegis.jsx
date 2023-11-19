@@ -39,7 +39,7 @@ function FormRegis() {
                     </div>
                     <button type="submit" className="w-full rounded-full border border-transparent mt-3 py-2 px-5 bg-teal-600 text-white hover:text-teal-600 hover:bg-white hover:border-teal-600 active:bg-teal-800 active:text-blue-100">Daftar</button>
                 </form>
-                <p className="text-sm text-[#143B75] mt-3">Sudah Memiliki Akun? <span><a href="/login" className="text-[#22897D]">Masuk</a></span></p>
+                <p className="text-sm text-[#143B75] mt-3">Sudah Memiliki Akun? <span><a href="/login" className="text-[#22897D] hover:text-blue-300">Masuk</a></span></p>
             </div>
         </div>
     );

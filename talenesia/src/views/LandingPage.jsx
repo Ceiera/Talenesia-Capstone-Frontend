@@ -6,7 +6,7 @@ import LandingDesc from '../components/molecules/LandingDesc';
 function LandingPage() {
     return(
         <>
-            <Navbar/>
+            <Navbar index={0}/>
             <div className='w-full flex justify-center'>
                 <div className='w-[85%] h-[80vh] py-3 flex gap-5 items-center'>
                     <div className='flex-[4]'>
