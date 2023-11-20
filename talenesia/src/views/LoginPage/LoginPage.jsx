@@ -17,6 +17,8 @@
 import LoginForm from '../../components/organisms/LoginForm';
 import Navbar from '../../components/organisms/Navbar';
 import loginImage from '../../assets/login.png';
+import Picture from '../../components/molecules/Picture';
+import FormLogin from '../../components/organisms/FormLogin';
 
 function Login () {
   const handleLogin = (email, password) => {
@@ -27,13 +29,15 @@ function Login () {
   return (
     <div>
       <Navbar />
-      <div className="w-screen h-screen flex flex-col justify-center items-center lg:grid lg:grid-cols-2">
-        <img
-          src={loginImage}
-          className="hidden lg:block w-1/2 hover:scale-150 transition-all duration-500 transform mx-auto"
-        />
-        <LoginForm onLogin={handleLogin} />
-
+      <div className="w-full flex justify-center">
+        <div className='w-[85%] h-[80vh] py-3 flex gap-6 items-center'>
+          <div className='flex-1'>
+            <Picture src={loginImage} alt="Login Image"/>
+          </div>
+          <div className='flex-1'>
+            <FormLogin/>
+          </div>
+        </div>
       </div>
     </div>
   );

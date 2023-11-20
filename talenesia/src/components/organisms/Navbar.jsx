@@ -92,42 +92,40 @@
 
 // export default Navbar;
 
-function Navbar () {
-  return (
-    <header className="py-5">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex justify-between">
-          <div className="flex items-center md:space-x-12">
-            <a aria-label="Home" href="#">
-              <img
-                src="https://talenesia.com/landing_assets/images/logo.png"
-                alt="Home"
-                className="h-10 w-auto"
-              />
-            </a>
-
-          </div>
-          <div className="flex items-center space-x-8 md:space-x-8">
-            <a className=" text-slate-700 hover:text-blue-200 font-semibold" href="#home">
-              Home
-            </a>
-            <a
-              className="text-slate-700 hover:text-blue-200 font-semibold"
-              href="#course"
-            >
-              Course
-            </a>
-            <a className="text-slate-700 hover:text-blue-200 font-semibold" href="#ourteacher">
-              Our Teacher
-            </a>
-            <a
-              className="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-teal-600 text-white hover:text-slate-100 hover:bg-teal-600 active:bg-teal-800 active:text-blue-100 focus-visible:outline-teal-600"
-              href="/register"
-            >
-              <span>Login</span>
+function Navbar({index}) {
+  return(
+    <header className="flex justify-center py-3.5">
+      <div className="w-[90%] flex justify-between items-center">
+        <div className="logo">
+          <div className="h-8">
+            <a href="/">
+              <img src="https://talenesia.com/landing_assets/images/logo.png" alt="Home" className="w-full h-full"/>
             </a>
           </div>
-        </nav>
+        </div>
+        <div className="navbar flex gap-6 items-center text-sm pl-5">
+          <div>
+          {index === 0
+              ? <p className="text-white rounded-full bg-[#143B75] py-1 px-3">Home</p>
+              : <a href="/" className="hover:text-blue-300 rounded-full bg-transparent py-1 px-3">Home</a>
+            }
+          </div>
+          <div>
+            {index === 1
+              ? <p className="text-white rounded-full bg-[#143B75] py-1 px-3">Kursus</p>
+              : <a href="/course" className="hover:text-blue-300 rounded-full bg-transparent py-1 px-3">Kursus</a>
+            }
+          </div>
+          <div>
+          {index === 2
+              ? <p className="text-white rounded-full bg-[#143B75] py-1 px-3">Pengajar</p>
+              : <a href="/teacher" className="hover:text-blue-300 rounded-full bg-transparent py-1 px-3">Pengajar</a>
+            }
+          </div>
+          <div>
+            <a href="/login" className="rounded-full border border-transparent py-1.5 px-5 bg-teal-600 text-white hover:text-teal-600 hover:bg-white hover:border-teal-600 active:bg-teal-800 active:text-blue-100">Login</a>
+          </div>
+        </div>
       </div>
     </header>
   );
